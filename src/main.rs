@@ -1,4 +1,6 @@
-pub fn main() {
+slint::include_modules!();
+
+pub fn _main() {
     let service = "guinix";
     let user = "dhilipsiva";
     let password = "mypass";
@@ -10,4 +12,8 @@ pub fn main() {
     } else {
         println!("Authentication failed =/");
     }
+}
+
+fn main() {
+    MainWindow::new().run();
 }

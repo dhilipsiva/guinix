@@ -7,3 +7,7 @@ edition = "2021"
 
 [dependencies]
 pam = "0.7.0"
+slint = "0.3.4"
+
+[build-dependencies]
+slint-build = "0.3.4"
