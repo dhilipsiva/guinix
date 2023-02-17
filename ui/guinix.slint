@@ -1,6 +1,23 @@
+import { VerticalBox, Button, LineEdit } from "std-widgets.slint";
+
 export MainWindow := Window {
-    Text {
-        text: "hello world";
-        color: green;
+    in-out property <string> username <=> input_username.text;
+    in-out property <string> password <=> input_password.text;
+    callback try_login <=> login_button.clicked;
+    
+    VerticalBox {
+        
+        input_username := LineEdit { 
+            placeholder-text: "username"; 
+        }
+        
+        input_password := LineEdit { 
+            placeholder-text: "passoword"; 
+            input-type: InputType.password; 
+        }
+        
+        login_button := Button { 
+            text: "Login"; 
+        }
     }
 }
